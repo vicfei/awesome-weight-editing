@@ -41,7 +41,9 @@
 
 | 工作 | 是什么 |
 |---|---|
-| [Sparks of Weight Space Programming](https://rikiyat.github.io/blog/weight-space-programming/) · [完整实验日志](https://github.com/RikiyaT/lm_understand-logs) —— MIT CSAIL | 源头：LLM 原生读取权重（这个策略网络玩哪个游戏）并直接书写；对 Qwen3.5-0.8B 的 0.016% rank-1 编辑使 MATH-500 从 7.9% 升至 48.1%。仅有博客；完整日志已公开。 |
+| [Sparks of Weight Space Programming](https://rikiyat.github.io/blog/weight-space-programming/) · [完整实验日志](https://github.com/RikiyaT/lm_understand-logs) —— MIT CSAIL | 源头：LLM 原生读取权重（这个策略网络玩哪个游戏）并直接书写；对 Qwen3.5-0.8B 的 0.016% rank-1 编辑使 MATH-500 从 7.9% 升至 48.1%。仅有博客；完整日志已公开。**限定（独立审计）**：该头条成绩在 model-card 的 presence penalty 下测得——纯贪心解码下同一编辑跌至 5%；见下条 SGNE-CC。 |
+| [SGNE-CC / DNA weight editing](https://github.com/Nondual-Observer/dna-weight-editing) · [v2 迁移](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | 审计者与替代方案：先审计 MIT-p50c 的几何（被编辑列被拉伸至 +114%、单一奇异模占更新能量 99.999%），再以 training-free 的**保范数列旋转**在贪心域 5/5 全胜（3.13 MiB，1,984 列横跨 FFN 与递归块）；v2 迁移到纯 Transformer 仅动 205 个 `down_proj` 列（占权重 0.0177%，贪心合计 +9.0pp）。SHA 锁定的轨迹与 CPU 验证器齐备；社区消融定位终止能力于 `down_proj`；搜索程序本身未开源。 |
+| [递归自编辑（SELFWRITE）](https://arxiv.org/abs/2611.29513) | 自指环节：模型在 Python 会话中检视自己的权重与激活、亲手写下自己的低秩编辑程序——零梯度；只有严格胜过隐藏门集的编辑才被合并。Qwen3.8-27B 五代演进，held-out avg@4 76.3 → 77.8。 |
 | [审计临床决策网络](https://arxiv.org/abs/2611.05341) | 首篇后续论文：WSP 作为临床网络的审计透镜。 |
 | [图像修复扩散模型](https://arxiv.org/abs/2611.04268) | 带递归改进环的 WSP——与 RSI 的首次交叉。 |
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | 47.5 万 CNN 权重全部由闭式统计写就、无梯度：73.7% vs 梯度训练 82.4%。 |
@@ -106,7 +108,7 @@
 
 ## 相邻列表
 
-- [SajjadPSavoji/awesome-weight-space-programming](https://github.com/SajjadPSavoji/awesome-weight-space-programming) 与 [brighterr/awesome-weight-space-programming](https://github.com/brighterr/awesome-weight-space-programming)——同周出现的 WSP 列表（2026-11）；本列表覆盖整个编辑家族，不止浪潮。
+- [Boom5426/Awesome-Weight-Space-Programming](https://github.com/Boom5426/Awesome-Weight-Space-Programming) · [SajjadPSavoji/awesome-weight-space-programming](https://github.com/SajjadPSavoji/awesome-weight-space-programming) · [brighterr/awesome-weight-space-programming](https://github.com/brighterr/awesome-weight-space-programming)——同周出现的 WSP 列表（2026-11）：广度优先的全域目录、带 CI 校验的规则化策展、复现清单雏形。本列表覆盖整个编辑家族，并配每日 arXiv 雷达。
 - [EnnengYang/Awesome-Model-Merging](https://github.com/EnnengYang/Awesome-Model-Merging-Methods-Theories-Applications) · [chrisliu298/awesome-llm-unlearning](https://github.com/chrisliu298/awesome-llm-unlearning)——上文引用的子领域深度地图。
 - 姊妹矩阵：[awesome-self-improving-coding-agents](https://github.com/vicfei/awesome-self-improving-coding-agents)（代码）· [awesome-agentic-ml](https://github.com/vicfei/awesome-agentic-ml)（模型与数据生产、算子理论）· [awesome-chatbi](https://github.com/vicfei/awesome-chatbi)（数据服务）· [awesome-ai-native](https://github.com/vicfei/awesome-ai-native)（组织）· [modifyllm](https://github.com/vicfei/modifyllm)（工具）。
 
