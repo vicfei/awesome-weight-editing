@@ -42,14 +42,13 @@
 | 工作 | 是什么 |
 |---|---|
 | [Sparks of Weight Space Programming](https://rikiyat.github.io/blog/weight-space-programming/) · [完整实验日志](https://github.com/RikiyaT/lm_understand-logs) —— MIT CSAIL | 源头：LLM 原生读取权重（这个策略网络玩哪个游戏）并直接书写；对 Qwen3.5-0.8B 的 0.016% rank-1 编辑使 MATH-500 从 7.9% 升至 48.1%。仅有博客；完整日志已公开。**限定（独立审计）**：该头条成绩在 model-card 的 presence penalty 下测得——纯贪心解码下同一编辑跌至 5%；见下条 SGNE-CC。 |
-| [SGNE-CC / DNA weight editing](https://github.com/Nondual-Observer/dna-weight-editing) · [v2 迁移](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | 审计者与替代方案：先审计 MIT-p50c 的几何（被编辑列被拉伸至 +114%、单一奇异模占更新能量 99.999%），再以 training-free 的**保范数列旋转**在贪心域 5/5 全胜（3.13 MiB，1,984 列横跨 FFN 与递归块）；v2 迁移到纯 Transformer 仅动 205 个 `down_proj` 列（占权重 0.0177%，贪心合计 +9.0pp）。SHA 锁定的轨迹与 CPU 验证器齐备；社区消融定位终止能力于 `down_proj`；搜索程序本身未开源。 |
+| [SGNE-CC / DNA weight editing](https://github.com/Nondual-Observer/dna-weight-editing) · [v2 迁移](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | 审计者与替代方案：先审计 MIT-p50c 的几何（被编辑列被拉伸至 +114%、单一奇异模占更新能量 99.999%），再以 training-free 的**保范数列旋转**在贪心域 5/5 全胜（3.13 MiB，1,984 列横跨 FFN 与递归块）；v2 迁移到纯 Transformer 仅动 205 个 `down_proj` 列（占权重 0.0177%，贪心合计 +9.0pp）。SHA 锁定的轨迹与 CPU 验证器齐备；已获独立复现，社区消融定位终止能力于 `down_proj`；搜索程序本身未开源。 |
 | [递归自编辑（SELFWRITE）](https://arxiv.org/abs/2611.29513) | 自指环节：模型在 Python 会话中检视自己的权重与激活、亲手写下自己的低秩编辑程序——零梯度；只有严格胜过隐藏门集的编辑才被合并。Qwen3.8-27B 五代演进，held-out avg@4 76.3 → 77.8。 |
 | [审计临床决策网络](https://arxiv.org/abs/2611.05341) | 首篇后续论文：WSP 作为临床网络的审计透镜。 |
 | [图像修复扩散模型](https://arxiv.org/abs/2611.04268) | 带递归改进环的 WSP——与 RSI 的首次交叉。 |
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | 47.5 万 CNN 权重全部由闭式统计写就、无梯度：73.7% vs 梯度训练 82.4%。 |
 | [weight-space-programming-skill](https://github.com/di37/weight-space-programming-skill) | 技术的 Claude Code skill 封装，自带随机对照筛查。 |
 | [model-weight-editing-lab](https://github.com/Teylersf/model-weight-editing-lab) | 27B 模型的持续直接编辑实验；对失败诚实。 |
-| [dna-weight-editing](https://github.com/Nondual-Observer/dna-weight-editing) · [1.5B 后续研究](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | 在保持列范数不变的前提下旋转指定输出列，消除 Qwen3.5-0.8B 与 DeepSeek-R1-1.5B 在 32k 贪婪解码下的推理死循环；已完成五项基准测试并获独立复现。 |
 | [modifyllm](https://github.com/vicfei/modifyllm) | 本列表的事务化工具包：带回执、对照与回滚的编辑。 |
 
 ## 知识编辑（经典）
