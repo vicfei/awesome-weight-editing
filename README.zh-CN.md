@@ -49,6 +49,7 @@
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | 47.5 万 CNN 权重全部由闭式统计写就、无梯度：73.7% vs 梯度训练 82.4%。 |
 | [weight-space-programming-skill](https://github.com/di37/weight-space-programming-skill) | 技术的 Claude Code skill 封装，自带随机对照筛查。 |
 | [model-weight-editing-lab](https://github.com/Teylersf/model-weight-editing-lab) | 27B 模型的持续直接编辑实验；对失败诚实。 |
+| [dna-weight-editing](https://github.com/Nondual-Observer/dna-weight-editing) · [1.5B 后续研究](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | 在保持列范数不变的前提下旋转指定输出列，消除 Qwen3.5-0.8B 与 DeepSeek-R1-1.5B 在 32k 贪婪解码下的推理死循环；已完成五项基准测试并获独立复现。 |
 | [modifyllm](https://github.com/vicfei/modifyllm) | 本列表的事务化工具包：带回执、对照与回滚的编辑。 |
 
 ## 知识编辑（经典）

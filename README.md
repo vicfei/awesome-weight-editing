@@ -59,6 +59,7 @@ Two companions make the triangle:
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | All 475k CNN weights written from closed-form statistics, no gradients: 73.7% vs 82.4% trained. |
 | [weight-space-programming-skill](https://github.com/di37/weight-space-programming-skill) | The technique packaged as a Claude Code skill, with random-control screening. |
 | [model-weight-editing-lab](https://github.com/Teylersf/model-weight-editing-lab) | Ongoing direct edits of a 27B model; honest about failures. |
+| [dna-weight-editing](https://github.com/Nondual-Observer/dna-weight-editing) · [1.5B follow-up](https://github.com/Nondual-Observer/deepseek-r1-1.5b-sgne-cc-v2) | Rotates selected output columns without changing their norms to stop 32k greedy reasoning loops on Qwen3.5-0.8B and DeepSeek-R1-1.5B. Benchmarked across five suites and independently replicated. |
 | [modifyllm](https://github.com/vicfei/modifyllm) | The transactional toolkit for this whole list: edits with receipts, controls, and rollback. |
 
 ## Knowledge editing (the classics)
