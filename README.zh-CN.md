@@ -49,6 +49,10 @@
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | 47.5 万 CNN 权重全部由闭式统计写就、无梯度：73.7% vs 梯度训练 82.4%。 |
 | [weight-space-programming-skill](https://github.com/di37/weight-space-programming-skill) | 技术的 Claude Code skill 封装，自带随机对照筛查。 |
 | [model-weight-editing-lab](https://github.com/Teylersf/model-weight-editing-lab) | 27B 模型的持续直接编辑实验；对失败诚实。 |
+| [WeightCode](https://github.com/Gen-Verse/WeightCode) · [论文](https://arxiv.org/abs/2611.25476) | 用 WSP 向小模型**安装新能力**——程序编译进权重，随附复现脚本、agent skill 与双语论文级 README。 |
+| [wsp-kit](https://github.com/AuremHQ/weight-space-programming) | 带评估门的小模型 WSP：门不过就不出厂——"7 次运行 2 次通过，其余 5 次被拒绝、交付 0 个权重"。无论成败每次运行都发布在 REAL-RUNS.md；另有服务 agent 读者的 llms.txt。 |
+| [DAWE](https://github.com/bandr-ai/dawe) | 数据归因权重编辑的 agent skill 形态：带上日志/轨迹 + 检查点，agent 冻结分组切分、诊断失败的 token 决策、在对照下推导闭式候选编辑、导出与检查点绑定的可逆 `.gpatch`——付费算力前还有预算审批环节。 |
+| [weights-only-replication](https://github.com/jhpark94/weights-only-replication) | 权重阅读实验的独立复现：Claude Opus 5.5 仅凭层尺寸 + 原始数字 4/4 命中游戏（Sonnet/Haiku 0/4），附逐转录的工具调用审计证明全程未用工具。 |
 | [modifyllm](https://github.com/vicfei/modifyllm) | 本列表的事务化工具包：带回执、对照与回滚的编辑。 |
 
 ## 知识编辑（经典）

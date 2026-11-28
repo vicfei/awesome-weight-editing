@@ -59,6 +59,10 @@ Two companions make the triangle:
 | [weight-space-galaxy10](https://github.com/DaybreakWannaCode/weight-space-galaxy10) | All 475k CNN weights written from closed-form statistics, no gradients: 73.7% vs 82.4% trained. |
 | [weight-space-programming-skill](https://github.com/di37/weight-space-programming-skill) | The technique packaged as a Claude Code skill, with random-control screening. |
 | [model-weight-editing-lab](https://github.com/Teylersf/model-weight-editing-lab) | Ongoing direct edits of a 27B model; honest about failures. |
+| [WeightCode](https://github.com/Gen-Verse/WeightCode) · [paper](https://arxiv.org/abs/2611.25476) | Capability *installation* into small models via WSP — programs compiled into weights, shipped with reproduction scripts, an agent skill, and a bilingual paper-grade README. |
+| [wsp-kit](https://github.com/AuremHQ/weight-space-programming) | Eval-gated WSP for small models: an edit ships only if the gate passes — "2 of 7 runs passed; the other 5 were refused and shipped 0 weights." Every run, pass or fail, is published in REAL-RUNS.md; llms.txt serves agent readers. |
+| [DAWE](https://github.com/bandr-ai/dawe) | Data-attributed weight editing as an agent skill: bring logs/traces + a checkpoint; the agent freezes grouped splits, diagnoses failing token decisions, derives closed-form candidate edits against controls, and exports a checkpoint-bound reversible `.gpatch` — with a budget-approval step before paid compute. |
+| [weights-only-replication](https://github.com/jhpark94/weights-only-replication) | Independent replication of the weight-reading experiment: Claude Opus 5.5 names 4/4 games from layer sizes + raw numbers (Sonnet/Haiku: 0/4), with a transcript-level tool-call audit proving no tools were used. |
 | [modifyllm](https://github.com/vicfei/modifyllm) | The transactional toolkit for this whole list: edits with receipts, controls, and rollback. |
 
 ## Knowledge editing (the classics)
